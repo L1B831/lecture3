@@ -1,0 +1,15 @@
+name: dart_oo
+description: 课程成绩册：类、mixin 与集合链式统计（第 3 课课堂案例）。
+version: 1.0.0
+repository: https://github.com/L1B831/lecture3.git
+
+environment:
+  sdk: ^3.13.4
+
+# Add regular dependencies here.
+dependencies:
+  path: ^1.9.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6
