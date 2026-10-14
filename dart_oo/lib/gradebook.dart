@@ -1,14 +1,9 @@
+import 'logger.dart';
 import 'student.dart';
 
-/// 日志能力基类。
-/// 注意：这是刻意保留的"一层继承"写法，步骤三将把它重构成 mixin Logger，
-/// 改造理由见进度报告"mixin 改造前后对照"。
-abstract class LoggedObject {
-  void log(String msg) => print('[$runtimeType] $msg');
-}
-
 /// 成绩册：内部持有 `List<Student>`，构造时接收列表。
-class GradeBook extends LoggedObject {
+/// 日志能力来自 mixin Logger（横向混入），不再占用唯一的 extends 名额。
+class GradeBook with Logger {
   final List<Student> _students;
 
   /// 防御性拷贝：外部之后对传入列表的增删不影响成绩册内部状态。
